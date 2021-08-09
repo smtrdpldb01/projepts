@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% include "includes/table1.html" %}
+
+<div class="row">
+    <div class="col-md-8 offset-md-0">
+        <div class="col-lg-8">
+            <form>
+            {% csrf_token %}
+            <input type="text" name="keyword" class="input-sm" maxlength="64" placeholder="Ara...">
+            <button type="submit" class="btn btn-danger">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

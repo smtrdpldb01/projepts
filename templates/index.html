@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="p-3 mb-2 bg-dark text-light text-center">
+
+	<h3>Proje Takip Sistemine HoşGeldiniz.</h3>
+	<p>Bu blog henüz kurulum aşamasındadır.</p>
+</div>
+<hr>
+<h3>Anasayfa</h3>
+<br>
+
+<p>
+	{% if request.user.is_authenticated %}
+		Giriş Yapılmış, {{request.user.username}}
+	{% else %}
+		Giriş Yapılmamış
+	{% endif %}
+</p>
+
+{% endblock body %}

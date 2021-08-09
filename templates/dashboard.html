@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block body %}
+
+{% if projects %}
+
+
+
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Proje No</th>
+        <th scope="col">Proje Adı</th>
+        <th scope="col">Müşteri Adı</th>
+        <th scope="col">Adet</th>
+        <th scope="col">Proje Baş.</th>
+        <th scope="col">Proje Bit.</th>
+        <th scope="col">Proje Durumu</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for project in projects %}
+        <tr>
+            <th scope="row">{{project.id}}</th>
+            <td><a href="/project/{{project.id}}">{{project.title1}}</a></td>
+            <!--
+            <td>{{project.title1}}</td>
+            -->
+            <td>{{project.title2}}</td>
+            <td>{{project.title3}}</td>
+            <td>{{project.title4}}</td>
+            <td>{{project.title5}}</td>
+            <td>{{project.title6}}</td>
+            <td>XXXX</td>
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% else %}
+<div class="alert alert-danger">
+    Henüz bir makaleniz bulunmuyor...
+</div>
+{% endif %}
+
+    <a class="btn btn-danger" href="/Pr0001/addproject">Proje Ekle</a>
+    <hr>
+
+{% endblock body %}

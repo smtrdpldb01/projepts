@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <div class="row">
+    <div class="col-sm">    
+    <blockquote class="blockquote text-center">
+    <p class="mb-0">PROJE DETAY SAYFASI</p>
+
+    <cite title="Source Title">TASARIM</cite><br>
+    <cite title="Source Title">Parça detay sayfası için</cite>
+    <td><a href="/about/">Tıklayın...</a></td>
+    </blockquote>
+    </div>
+
+    <div class="col-sm">
+    <u><b><i>Proje No: </i></b>{{project.title1}}</u><br>
+    <u><b><i>Proje Adı: </i></b>{{project.title2}}</u><br>
+    <u><b><i>Müşteri Adı: </i></b>{{project.title3}}</u><br>
+    <u><b><i>Adet: </i></b>{{project.title4}}</u><br>
+    </div>
+
+    <div class="col-sm">
+    <u><b><i>Başlangıç Tarihi: </i></b>{{project.title5}}</u><br>
+    <u><b><i>Bitiş Tarihi: </i></b>{{project.title6}}</u><br>
+    <u><b><i>Proje Sorumlusu: </i></b>{{project.title7}}</u><br>
+    <u><b><i>İrtibat Teleonu: </i></b>{{project.title8}}</u><br>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<td><a href="/Pr0001/update/{{project.id}}" class="btn btn-danger">Güncelle</a></td>
+<td><a href="/Pr0001/delete/{{project.id}}" class="btn btn-danger">Sil</a></td>
+{% endblock body %}
+
+<!-- {% include "includes/table2.html" %} -->
